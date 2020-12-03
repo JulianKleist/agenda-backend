@@ -17,6 +17,8 @@ app.use( express.json() );
 // Base de datos
 dbConnection();
 
+const port = process.env.PORT || 8080;
+
 // Path
 app.use( '/api/contacts', require('./routes/contacts') );
 app.use( '/api/search', require('./routes/search') );
